@@ -9,7 +9,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -19,11 +19,14 @@
 <div
     class="relative min-h-screen bg-gray-100 bg-center p-5 bg-dots-darker dark:bg-dots-lighter space-y-10 dark:bg-gray-900 selection:bg-red-500 selection:text-white">
     @if (Route::has('login'))
-        <livewire:welcome.navigation />
+        <livewire:welcome.navigation/>
     @endif
     <div class="flex flex-col items-center justify-center p-6 mx-auto space-y-4 text-center max-w-7xl lg:p-8">
-        <x-application-logo class="w-24 h-24 fill-current text-primary" />
-        <x-primary-button href="{{ route('register') }}">Get Started</x-primary-button>
+        <x-application-logo class="w-24 h-24 fill-current text-primary"/>
+        <a href="{{route('register')}}">
+            <x-primary-button>Get Started</x-primary-button>
+        </a>
+
     </div>
 </body>
 </html>
