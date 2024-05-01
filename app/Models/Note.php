@@ -10,7 +10,9 @@ class Note extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $guarded = [];
+    protected $guarded = [
+        'id',
+    ];
 
     public function user()
     {
