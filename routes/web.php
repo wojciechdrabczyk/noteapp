@@ -12,6 +12,10 @@ Route::view('notes', 'notes.index')
     ->middleware(['auth', 'verified'])
     ->name('notes.index');
 
+Route::view('notes/create', 'notes.create')
+    ->middleware(['auth', 'verified'])
+    ->name('notes.create');
+
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
